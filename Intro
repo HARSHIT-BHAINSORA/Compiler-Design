@@ -1,0 +1,31 @@
+
+step 1   
+
+lex Source 
+lex. l  -----------> Lex Compiler --------> lex.yy.c
+
+step 2 
+lex.yy.c ---------> C Compiler -------> a.out
+
+step 3 
+input Stream --------> a.out -----------> Sequence of token
+
+
+
+* fromat of lex 
+
+%{
+    Declearation Section
+%}
+
+%%
+    Rule
+%%
+
+int yywrap(){}
+
+int main()
+{
+    yylex();
+    return 0;
+}
