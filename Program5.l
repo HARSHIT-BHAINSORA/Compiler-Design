@@ -21,3 +21,14 @@ int main()
     
     return 0;
 }
+
+%{
+	int c = 0;
+%}
+
+%%
+^[a-zA-Z_][a-zA-Z0-9_]* {printf("Valid Idnetifier");}
+^[a-zA-z] {printf("Invalid Identifier");}
+.;
+%%
+
