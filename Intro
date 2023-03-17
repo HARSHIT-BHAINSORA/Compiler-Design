@@ -12,10 +12,10 @@ input Stream --------> a.out -----------> Sequence of token
 
 
 
-* fromat of lex 
+* format of lex 
 
 %{
-    Declearation Section
+    Declaration Section
 %}
 
 %%
