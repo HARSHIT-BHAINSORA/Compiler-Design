@@ -5,7 +5,7 @@
 %%
 [\n] {lines++;word_cnt++;}
 [" "] {space++;word_cnt++;}
-[\t] {tabs++;}
+[\t] {tabs++;word_cnt++;}
 [^\n\t] {ch++;}
 END {return 0;}
 %%
