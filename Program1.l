@@ -3,7 +3,7 @@
     int lines = 0 , ch = 0 , space = 0 , word_cnt = 0 , tabs = 0;
 %}
 %%
-[\n] {lines++;}
+[\n] {lines++;word_cnt++;}
 [" "] {space++;word_cnt++;}
 [\t] {tabs++;}
 [^\n\t] {ch++;}
