@@ -1,5 +1,7 @@
 %{
     #include<stdio.h>
+    int yylex(void);
+    int yyerror(char *);
 %}
 %token NUM
 %left '+' '-'
@@ -12,13 +14,12 @@ E : E '+' E {printf("+");}
   | E '/' E {printf("/");}
   | '(' E ')'
   | '-' E %prec NEGATIVE {printf("-");}
-  | NUM {printf("%d , yylval);}
+  | NUM {printf("%d" , yylval);}
   ;
 %%
 int main(){
-    yyprase();
+    yyparse();
 }  
-
 int yyerror(char *msg){
     return printf("error YACC : %s\n" , msg);
 }
