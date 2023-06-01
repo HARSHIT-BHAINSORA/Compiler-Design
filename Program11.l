@@ -1,4 +1,4 @@
-%s A B C D Y z
+%s A B C D Y Z
 %% 
 <INITIAL>[A-Za-z_] BEGIN B;
 <INITIAL>[0-9] BEGIN A;
@@ -37,11 +37,11 @@
 <Z>[^\n] BEGIN Z;
 <Z>[\n] BEGIN INITIAL;printf("INVALID INPUT\n");
 %%
+
+int yywrap(){ }
+
 int main(){
     printf("Enter the char[A-Za-z0-9_.] only:\n");
     yylex();
 }
-
-
-
 
