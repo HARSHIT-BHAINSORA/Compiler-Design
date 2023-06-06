@@ -22,7 +22,7 @@
 <C>[0-9] BEGIN C;
 <C>[A-Za-z_] BEGIN Y;
 <C>[^A-Za-z0-9_.\n] BEGIN Z;
-<C>\n BEGIN INITIAL;printf("Not Accepted\n");
+<C>\n BEGIN INITIAL;printf("Float\n");
 
 <Y>[A-Za-z0-9_.] BEGIN Y;
 <Y>[^A-Za-z0-9_.\n] BEGIN Z;
