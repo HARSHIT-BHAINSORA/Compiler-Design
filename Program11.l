@@ -16,7 +16,7 @@
 <B>[0-9] BEGIN B;
 <B>[.] BEGIN Y;
 <B>[^A-Za-z0-9_.\n] BEGIN Z;
-<B>\n BEGIN INITIAL;printf("IDENTIFIER");
+<B>\n BEGIN INITIAL;printf("IDENTIFIER\n");
 
 <C>[.] BEGIN Y;
 <C>[0-9] BEGIN D;
