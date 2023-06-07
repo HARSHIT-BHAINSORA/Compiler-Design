@@ -10,6 +10,7 @@
 %%
 S: E {printf("\n");};
 E : E '+' E {printf("+");}
+  | E '*' E {printf("*");} 
   | E '-' E {printf("-");}
   | E '/' E {printf("/");}
   | '(' E ')'
