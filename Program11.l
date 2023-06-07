@@ -1,4 +1,4 @@
-%s A B C D Y Z
+%s A B C Y Z
 %% 
 <INITIAL>[A-Za-z_] BEGIN B;
 <INITIAL>[0-9] BEGIN A;
@@ -19,16 +19,10 @@
 <B>\n BEGIN INITIAL;printf("IDENTIFIER\n");
 
 <C>[.] BEGIN Y;
-<C>[0-9] BEGIN D;
+<C>[0-9] BEGIN C;
 <C>[A-Za-z_] BEGIN Y;
 <C>[^A-Za-z0-9_.\n] BEGIN Z;
-<C>\n BEGIN INITIAL;printf("Not Accepted\n");
-
-<D>[.] BEGIN Y;
-<D>[0-9] BEGIN D;
-<D>[A-Za-z_] BEGIN Y;
-<D>[^A-Za-z0-9_.\n] BEGIN Y;
-<D>\n BEGIN INITIAL;printf("FLOAT\n");
+<C>\n BEGIN INITIAL;printf("FLOAT\n");
 
 <Y>[A-Za-z0-9_.] BEGIN Y;
 <Y>[^A-Za-z0-9_.\n] BEGIN Z;
